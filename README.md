@@ -1,4 +1,15 @@
 function whoAmI(name, age) {
+	if ((name.constructor !== String)){
+		console.error('Name is not a string');
+    }
+	if ((age.constructor !== Number)){
+		console.error('Age is not a number');
+    }	
+	
+    if(!name || !age) {
+       console.error('Arguments not valid'); 
+    }  
+
     let yearOfBirth;
     try {
         let yearOfBirth = calcYearOfBirth(age);
@@ -15,5 +26,5 @@ function calcYearOfBirth(age) {
     }    
     return 2018 - age;
 }   
-whoAmI();     
+whoAmI(29, "twenty nine");     
      
